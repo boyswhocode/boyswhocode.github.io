@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Girls Who Code — [Your High School]</title>
+  <meta name="description" content="Girls Who Code club at [Your High School] — learn to code, build projects, and build community." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f172a; /* dark navy */
+      --card:#0b1220;
+      --accent:#7c3aed; /* purple */
+      --muted:#94a3b8;
+      --glass: rgba(255,255,255,0.04);
+      --radius:14px;
+      --max-width:1100px;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,#071026 0%, #071028 60%, #061827 100%);color:#e6eef8}
+    a{color:var(--accent);text-decoration:none}
+    header{padding:28px 20px;display:flex;align-items:center;justify-content:space-between;max-width:var(--max-width);margin:0 auto}
+    .brand{display:flex;gap:14px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#06b6d4);display:flex;align-items:center;justify-content:center;font-weight:800;color:white;box-shadow:0 6px 18px rgba(124,58,237,0.18)}
+    nav{display:flex;gap:18px;align-items:center}
+    nav a{font-weight:600;color:var(--muted)}
+
+    .container{max-width:var(--max-width);margin:24px auto;padding:0 20px}
+
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin-top:12px}
+    .hero-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:34px;border-radius:var(--radius);box-shadow:0 10px 30px rgba(2,6,23,0.6)}
+    .eyebrow{font-size:13px;color:var(--accent);font-weight:700;letter-spacing:0.06em;text-transform:uppercase}
+    h1{margin:6px 0 12px;font-size:32px;line-height:1.05}
+    p.lead{color:var(--muted);margin:0 0 18px}
+    .cta-row{display:flex;gap:12px}
+    .btn{background:var(--accent);color:white;padding:12px 16px;border-radius:10px;font-weight:700;border:0;cursor:pointer}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+    /* Features */
+    .features{display:flex;gap:14px;margin-top:18px}
+    .feature{background:var(--glass);padding:12px;border-radius:10px;flex:1}
+    .feature h4{margin:6px 0}
+    .cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px}
+
+    /* Sidebar */
+    .sidebar{padding:22px;border-radius:14px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));box-shadow:0 8px 24px rgba(2,6,23,0.6)}
+    .meetups{display:flex;flex-direction:column;gap:12px}
+    .meetup{display:flex;justify-content:space-between;align-items:center;padding:12px;background:rgba(255,255,255,0.02);border-radius:10px}
+
+    /* Projects / Gallery */
+    .projects{margin-top:26px}
+    .project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .project{min-height:120px;border-radius:10px;background:linear-gradient(90deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));display:flex;align-items:center;justify-content:center;font-weight:600;color:var(--muted)}
+
+    /* Signup */
+    form{display:flex;flex-direction:column;gap:10px}
+    input,textarea,select{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:8px;color:inherit}
+
+    footer{max-width:var(--max-width);margin:46px auto 80px;padding:0 20px;display:flex;justify-content:space-between;align-items:center;color:var(--muted)}
+
+    /* responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr;}
+      .cards-grid,.project-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:640px){
+      header{padding:18px}
+      h1{font-size:26px}
+      .cards-grid,.project-grid{grid-template-columns:1fr}
+      .logo{width:48px;height:48px}
+      nav{display:none}
+    }
+
+    /* small helpers */
+    .muted{color:var(--muted)}
+    .pill{background:rgba(255,255,255,0.03);padding:6px 10px;border-radius:999px;font-weight:700}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo" aria-hidden="true">G</div>
+      <div>
+        <div style="font-weight:800">Girls Who Code</div>
+        <div class="muted" style="font-size:13px">[Your High School]</div>
+      </div>
+    </div>
+    <nav aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#events">Events</a>
+      <a href="#projects">Projects</a>
+      <a href="#join">Join</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container" role="main">
+    <section class="hero">
+      <div class="hero-card" aria-labelledby="hero-heading">
+        <div class="eyebrow">Empowering young coders</div>
+        <h1 id="hero-heading">Learn. Build. Lead. — Girls Who Code at [Your High School]</h1>
+        <p class="lead">A supportive space for students who identify as girls or non-binary to learn programming, work on hands-on projects, prepare for tech careers, and build community — no prior experience required.</p>
+        <div class="cta-row" role="group" aria-label="Primary actions">
+          <a class="btn" href="#join">Join a meeting</a>
+          <a class="btn ghost" href="#projects">See projects</a>
+        </div>
+
+        <div class="features" aria-hidden="false">
+          <div class="feature">
+            <strong>Weekly Workshops</strong>
+            <div class="muted" style="font-size:13px">Intro to Python, Web, and App dev</div>
+          </div>
+          <div class="feature">
+            <strong>Mentorship</strong>
+            <div class="muted" style="font-size:13px">Peer + teacher mentors</div>
+          </div>
+          <div class="feature">
+            <strong>Competitions & Hackathons</strong>
+            <div class="muted" style="font-size:13px">Team support for events</div>
+          </div>
+        </div>
+
+        <div class="cards-grid" aria-label="Quick info">
+          <div class="card">
+            <strong>Who can join?</strong>
+            <p class="muted" style="margin:8px 0 0">All students who identify as girls or non-binary. Allies welcome as volunteers.</p>
+          </div>
+          <div class="card">
+            <strong>No experience?</strong>
+            <p class="muted" style="margin:8px 0 0">Beginner-friendly curriculum and step-by-step projects.</p>
+          </div>
+          <div class="card">
+            <strong>What we build</strong>
+            <p class="muted" style="margin:8px 0 0">Websites, games, mobile apps, data projects, and robotics integrations.</p>
+          </div>
+        </div>
+      </div>
+
+      <aside class="sidebar" aria-labelledby="next-meeting">
+        <h3 id="next-meeting">Next Meetings</h3>
+        <div class="meetups">
+          <div class="meetup"><div><strong>Tomorrow — Club Kickoff</strong><div class="muted" style="font-size:13px">3:30 PM — Room 210</div></div><div class="pill">All</div></div>
+          <div class="meetup"><div><strong>Sep 25 — Intro to Python</strong><div class="muted" style="font-size:13px">3:30 PM — Lab A</div></div><div class="pill">Beginner</div></div>
+          <div class="meetup"><div><strong>Oct 2 — Web Jam</strong><div class="muted" style="font-size:13px">3:30 PM — Room 210</div></div><div class="pill">All</div></div>
+        </div>
+
+        <hr style="margin:16px 0;border:none;border-top:1px solid rgba(255,255,255,0.03)" />
+        <div>
+          <strong>Faculty Sponsor</strong>
+          <p class="muted" style="margin:8px 0 0">Ms. Lower — Computer Science Dept.</p>
+        </div>
+
+        <div style="margin-top:14px">
+          <strong>Volunteer?</strong>
+          <p class="muted" style="margin:8px 0 10px">We welcome mentors from the community. Share your skills and time.</p>
+          <a class="btn" href="#contact">Contact us</a>
+        </div>
+      </aside>
+    </section>
+
+    <section id="projects" class="projects">
+      <h2>Recent Projects</h2>
+      <p class="muted">Student-led projects from this semester. Want to showcase your work? Ask a mentor to add it here.</p>
+      <div class="project-grid" style="margin-top:14px">
+        <div class="project">Weather App — HTML/CSS/JS</div>
+        <div class="project">Campus Map — React</div>
+        <div class="project">Accessibility Quiz — Python</div>
+        <div class="project">Art Generator — P5.js</div>
+        <div class="project">Robotics Controller — Arduino</div>
+        <div class="project">Portfolio Site — HTML/CSS</div>
+      </div>
+    </section>
+
+    <section id="about" style="margin-top:28px">
+      <h2>About the Club</h2>
+      <p class="muted">We focus on three pillars: learning (workshops & curriculum), building (projects & hackathons), and leadership (mentorship & outreach). We aim to create a welcoming, inclusive environment so members can try tech without fear of judgment.</p>
+
+      <h3 style="margin-top:18px">Code of Conduct</h3>
+      <p class="muted">Be respectful. Support each other. Share credit. Harassment is not tolerated. If something happens, contact the faculty sponsor immediately.</p>
+    </section>
+
+    <section id="join" style="margin-top:28px">
+      <h2>Join Us</h2>
+      <p class="muted">Sign up to get meeting reminders, volunteer opportunities, and project showcases. We keep emails school-appropriate and never share personal info without consent.</p>
+
+      <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:12px">
+        <div style="flex:1;min-width:260px" class="hero-card">
+          <form aria-label="Join form" onsubmit="event.preventDefault(); alert('Thanks — this form is a demo. Replace with your backend or a Google Form link.');">
+            <label for="name">Full name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" required />
+
+            <label for="grade">Grade</label>
+            <select id="grade" name="grade" aria-label="grade">
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+
+            <label for="email">School email</label>
+            <input id="email" name="email" type="email" placeholder="you@school.edu" required />
+
+            <label for="experience">Experience (brief)</label>
+            <textarea id="experience" name="experience" rows="3" placeholder="None / beginner / some HTML..." ></textarea>
+
+            <button class="btn" type="submit">Join the club</button>
+          </form>
+        </div>
+
+        <div style="flex:1;min-width:260px" class="hero-card">
+          <h4>Parent / Volunteer</h4>
+          <p class="muted">Interested in helping run workshops, mentoring, or judging demos? Leave your contact and availability below.</p>
+          <form onsubmit="event.preventDefault(); alert('Thanks — replace with real contact handling.');">
+            <label for="pname">Name</label>
+            <input id="pname" type="text" placeholder="Parent / Mentor name" />
+            <label for="pemail">Email</label>
+            <input id="pemail" type="email" placeholder="you@domain.com" />
+            <button class="btn" type="submit">Contact us</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:28px">
+      <h2>Contact</h2>
+      <p class="muted">Questions? Reach out to Ms. Lower (faculty sponsor) or the student leadership team.</p>
+      <div style="display:flex;gap:18px;flex-wrap:wrap;margin-top:10px">
+        <div class="card" style="min-width:220px">
+          <strong>Faculty Sponsor</strong>
+          <p class="muted" style="margin:8px 0 0">Ms. Lower — lower@school.edu</p>
+        </div>
+        <div class="card" style="min-width:220px">
+          <strong>Club Email</strong>
+          <p class="muted" style="margin:8px 0 0">gwc@[your-school].edu</p>
+        </div>
+        <div class="card" style="min-width:220px">
+          <strong>Student Leads</strong>
+          <p class="muted" style="margin:8px 0 0">President: [Name] — projects@school.edu</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <strong>Girls Who Code — [Your High School]</strong>
+      <div class="muted" style="font-size:13px">© <span id="year"></span> All rights reserved</div>
+    </div>
+    <div class="muted">Follow us: <a href="#" aria-label="Instagram">Instagram</a> · <a href="#" aria-label="GitHub">GitHub</a> · <a href="#" aria-label="Email">Email</a></div>
+  </footer>
+
+  <script>
+    // small accessibility + nicety
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
